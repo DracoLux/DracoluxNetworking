@@ -4,15 +4,15 @@ import java.awt.*;
 
 public class LightChange implements Command {
     public Color color;
-    public LightPattern lightPattern;
+    public int volume;
 
-    public LightChange(Color color, LightPattern lightPattern) {
+    public LightChange(Color color, int volumePercentage) {
         this.color = color;
-        this.lightPattern = lightPattern;
+        this.volume = volumePercentage;
     }
 
     @Override
     public String toString(){
-        return color + " " + lightPattern;
+        return volume + "% " + color;
     }
 }
